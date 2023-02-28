@@ -1,14 +1,25 @@
-name: ST-BoilerPlate # TODO: 수정
-main: net.starly.boilerplate.BoilerPlateMain # TODO: 수정
+name: ST-ItemCommand
+main: net.starly.itemcommand.ItemCommandMain
 author: Starly Team
 website: http://starly.kr/discord
 
-description: BoilerPlate Plugin. # TODO: 수정
+description: ItemCommand Plugin.
 
-softdepend:
-  - ST-Core
+softdepend: [ ST-Core ]
 
 version: 1.0
 api-version: 1.13
 
+permissions:
+  starly.itemcommand.reload:
+    description: 아이템 명령어 콘피그 명령어 실행 권한
+  staly.itemcommand.create:
+    description: 아이템 명령어 생성 명령어 실행 권한
+
 commands:
+  itemcommand:
+    aliases: [ ic, 아이템커맨드, 아이템명령어 ]
+    description: 아이템 명령어
+  itemcommandreload:
+    aliases: [ 아이템명령어리로드, 아이템커맨드리로드, icreload ]
+    description: 아이템 명령어 콘피그를 다시 불러옵니다.
