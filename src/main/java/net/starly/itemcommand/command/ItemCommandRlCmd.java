@@ -14,10 +14,8 @@ public class ItemCommandRlCmd implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Player player = (Player) sender;
-
-        if (!player.hasPermission("starly.itemcommand.reload")) {
-            player.sendMessage(MessageContent.getMessageContent().getMessageAfterPrefix(MessageContent.MessageType.ERROR, "noPermission"));
+        if (!sender.hasPermission("starly.itemcommand.reload")) {
+            sender.sendMessage(MessageContent.getMessageContent().getMessageAfterPrefix(MessageContent.MessageType.ERROR, "noPermission"));
             return false;
         }
 

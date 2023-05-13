@@ -18,13 +18,11 @@ public class ItemCommandCmd implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
-        Player player = (Player) sender;
-
         if (!(sender instanceof Player)) {
             sender.sendMessage(MessageContent.getMessageContent().getMessageAfterPrefix(MessageContent.MessageType.ERROR, "noConsole"));
             return false;
         }
+        Player player = (Player) sender;
 
         if (!player.hasPermission("staly.itemcommand.create")) {
             player.sendMessage(MessageContent.getMessageContent().getMessageAfterPrefix(MessageContent.MessageType.ERROR, "noPermission"));
