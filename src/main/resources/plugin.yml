@@ -1,13 +1,14 @@
 name: ST-ItemCommand
 main: net.starly.itemcommand.ItemCommandMain
 author: Starly Team
-website: http://starly.kr/discord
+website: http://starly.kr/
 
 description: ItemCommand Plugin.
 
-softdepend: [ ST-Core ]
+softdepend:
+  - ST-Core
 
-version: 1.0
+version: 1.1
 api-version: 1.13
 
 permissions:
